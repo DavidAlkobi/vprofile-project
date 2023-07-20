@@ -7,6 +7,6 @@ FROM tomcat:9-jre11
 LABEL "Project"="vprofile"
 LABEL "Author"="David"
 RUN rm -rf /usr/local/tomcat/webapp/*
-COPY --from=BUILD_IMAGE vprofile-project/target/vprofile-v2.war /usr/local/tomcat/webapp/ROOT.war
+COPY --from=BUILD_IMAGE vprofile-project/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
